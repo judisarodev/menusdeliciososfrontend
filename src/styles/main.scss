@@ -3,11 +3,14 @@
 // Importar variables
 @import 'variables';
 
+* {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
 // Estilos globales
 body {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: $base-font-size;
     color: $font-color;
     margin: 0;

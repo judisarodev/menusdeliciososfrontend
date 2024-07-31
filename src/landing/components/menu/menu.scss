@@ -1,0 +1,21 @@
+@import './../../../styles/variables';
+
+.p-menubar {
+    background-color: black;
+    border: none;
+    border-radius: 0px;
+}
+
+.p-menuitem-link:hover{
+    color: black;
+}
+
+.menu__icon{
+    margin-right: $large-spacing;
+}
+
+@media (width <= 960px) {
+    .menu__icon{
+        display: none;
+    }   
+}
