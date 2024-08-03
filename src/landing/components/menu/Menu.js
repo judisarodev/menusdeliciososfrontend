@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Menubar } from 'primereact/menubar';
 import './menu.scss';
-import logo from './../../../assets/logo/black.png';
+import blackLogo from './../../../assets/logo/white-text.png';
+import whiteLogo from './../../../assets/logo/black-text.png';
 
 const Menu = () => {
+
+    const [isAtTop, setIsAtTop] = useState(true);
+
+    useEffect(() => {
+        function handleScroll(){
+            if(window.scrollY < 50){
+                setIsAtTop(true);
+            }else{
+                setIsAtTop(false);
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, []); 
 
     const items = [
         {
@@ -33,11 +51,15 @@ const Menu = () => {
         }
     ];
 
-    const icon = <img className="menu__icon" src={ logo } width={'90px'} alt="Logo"/>;
+    const icon = <img className="menu__icon" src={ isAtTop ? blackLogo : whiteLogo } width={'90px'} alt="Logo"/>;
+
+    const menuStyles = {
+        backgroundColor: isAtTop ? 'black' : 'white'
+    }
 
     return(<>
         <nav>
-            <Menubar start={icon} model={items}/>
+            <Menubar style={menuStyles} start={icon} model={items}/>
         </nav>
     </>);
 }

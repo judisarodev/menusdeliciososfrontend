@@ -1,9 +1,12 @@
 @import './../../../styles/variables';
 
 .p-menubar {
-    background-color: black;
     border: none;
     border-radius: 0px;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .p-menuitem-link:hover{
@@ -12,6 +15,7 @@
 
 .menu__icon{
     margin-right: $large-spacing;
+    transition: opacity 0.3s ease;
 }
 
 @media (width <= 960px) {
