@@ -2,19 +2,30 @@
 
 .card__container{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
     
+    min-width: 350px;
+    max-width: 400px;
     padding: $large-box-spacig;
     
     border: 1px #D9E9E7 solid;
+    background-color: white;
     border-radius: 12px;
 
 }
 
 .card__title {
     font-size: $title-font-size; 
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .card__text {
     font-size: $base-font-size;
+    color: #656D6F;
+}
+.card__button button{
+    width: 100%;
 }

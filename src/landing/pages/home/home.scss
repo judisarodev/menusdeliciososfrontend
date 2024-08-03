@@ -3,15 +3,16 @@
 .home__banner{
     background: url('./../../../assets/home/banner-home.jpg') no-repeat center;
     background-size: cover;
-    height: 85vh;
+    height: 100vh;
     width: 100%;
 
     display: flex;
     flex-direction: column;
+    gap: 10px;
     color:white;
     justify-content: end;
     align-items: start;
-    padding: 50px;
+    padding: 50px 50px 30vh 50px;
 }
 
 .home__banner h1 {
@@ -40,19 +41,31 @@
     padding: 5px;
 }
 
+.home__floating-cards-container{
+    position: relative;
+    bottom: 100px;
+    z-index: 1;
+}
+
 .home__cards-container{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: $large-box-spacig;
     
     padding-left: $large-box-spacig;
     padding-right: $large-box-spacig;
 }
 
-@media (width < 415px) {
+
+@media (width <= 650px) {
     .home__banner h1 {
-        max-width: 800px;
         text-align: left;
         font-size: $small-heading-font-size;
+        line-height: 70px;
+    }
+    .home__banner p{
+        display: none;
     }
 }

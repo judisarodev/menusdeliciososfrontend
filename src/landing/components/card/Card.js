@@ -1,5 +1,6 @@
 import React from "react";
 import './card.scss'
+import { Button } from "primereact/button";
 
 const Card = ({ icon, title, text, action }) => {
     return(
@@ -13,8 +14,8 @@ const Card = ({ icon, title, text, action }) => {
         <div className="card__text">
             { text }
         </div>
-        <div>
-            <button onClick={action}></button>
+        <div className="card__button">
+            <Button label='Ver más' outlined  severity="secondary"/>
         </div>
     </div>);
 }
