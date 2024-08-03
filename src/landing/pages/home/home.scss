@@ -15,15 +15,17 @@
 }
 
 .home__banner h1 {
-    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;    
     text-align: left;
     font-size: $heading-font-size;
     line-height: 100px;
+    margin: 0px;
 }
 
 
 .home__banner p {
-    max-width: 500px;
     text-align: left;
     font-size: $base-font-size;
     background-color: rgba(0, 0, 0, 0.5);
@@ -36,6 +38,15 @@
     background-color: white;
     border-radius: 5px;
     padding: 5px;
+}
+
+.home__cards-container{
+    display: flex;
+    flex-direction: row;
+    gap: $large-box-spacig;
+    
+    padding-left: $large-box-spacig;
+    padding-right: $large-box-spacig;
 }
 
 @media (width < 415px) {

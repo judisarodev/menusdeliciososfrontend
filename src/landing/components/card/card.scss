@@ -1,0 +1,20 @@
+@import './../../../styles//variables';
+
+.card__container{
+    display: flex;
+    flex-direction: column; 
+    
+    padding: $large-box-spacig;
+    
+    border: 1px #D9E9E7 solid;
+    border-radius: 12px;
+
+}
+
+.card__title {
+    font-size: $title-font-size; 
+}
+
+.card__text {
+    font-size: $base-font-size;
+}
