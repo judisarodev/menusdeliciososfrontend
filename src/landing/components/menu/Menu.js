@@ -41,11 +41,6 @@ const Menu = () => {
         },
         {
             id: 4,
-            label: 'Sobre nosotros',
-            url: '/'
-        },
-        {
-            id: 5,
             label: 'Plantillas',
             url: '/'
         }

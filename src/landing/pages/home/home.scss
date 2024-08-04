@@ -1,11 +1,11 @@
 @import './../../../styles/variables';
-
 .home__banner{
     background: url('./../../../assets/home/home-banner.jpg') no-repeat center;
     background-size: cover;
     height: 120vh;
     width: 100%;
 
+    color: black;
     display: flex;
     flex-direction: column;
     gap: 10px;
