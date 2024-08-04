@@ -53,13 +53,9 @@ const Menu = () => {
 
     const icon = <img className="menu__icon" src={ isAtTop ? blackLogo : whiteLogo } width={'90px'} alt="Logo"/>;
 
-    const menuStyles = {
-        backgroundColor: isAtTop ? 'black' : 'white'
-    }
-
     return(<>
         <nav>
-            <Menubar style={menuStyles} start={icon} model={items}/>
+            <Menubar className={isAtTop ? 'menu__standard-color' : 'menu__light-color'} start={icon} model={items}/>
         </nav>
     </>);
 }

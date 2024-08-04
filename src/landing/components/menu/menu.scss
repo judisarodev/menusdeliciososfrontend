@@ -7,15 +7,21 @@
     z-index: 10;
     width: 100%;
     transition: background-color 0.3s ease;
-}
-
-.p-menuitem-link:hover{
-    color: black;
+    border-bottom: 1px solid $light-border-color;
 }
 
 .menu__icon{
+    margin-left: $large-spacing;
     margin-right: $large-spacing;
     transition: opacity 0.3s ease;
+}
+
+.menu__standard-color{
+    background-color: black;
+}
+
+.menu__light-color{
+    background-color: white;
 }
 
 @media (width <= 960px) {

@@ -1,15 +1,24 @@
 // _variables.scss
 
 // Colores
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
-$font-color: #333;
+$primary-color: #f97316;
+$secondary-color: #16a2f9;
+$light-color: #ffffff;
+$dark-color: #333333;
+$primary-text-color: #333333;
+$secondary-text-color: #666666;
+$accent-color: #f9a916;
+$success-color: #28a745;
+$warning-color: #ffc107;
+$error-color: #dc3545;
+$light-border-color: #D9E9E7;
+$primary-background-color: #495369;
 
 // Tipografía
 $base-font-size: 16px;
 $title-font-size: 1.6rem;
-$small-heading-font-size: 2em;
 $heading-font-size: 3em;
+$small-heading-font-size: 2em;
 
 // Espaciados
 $base-spacing: 16px;
@@ -19,4 +28,5 @@ $large-spacing: 24px;
 // Paddings y margins
 $base-box-spacig: 12px;
 $small-box-spacig: 6px;
+$medium-box-spacig: 12px;
 $large-box-spacig: 36px;

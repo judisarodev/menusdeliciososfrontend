@@ -10,8 +10,8 @@
     max-width: 400px;
     padding: $large-box-spacig;
     
-    border: 1px #D9E9E7 solid;
-    background-color: white;
+    border: 1px $light-border-color solid;
+    background-color: $light-color;
     border-radius: 12px;
 
 }
@@ -19,12 +19,11 @@
 .card__title {
     font-size: $title-font-size; 
     font-weight: 600;
-    font-size: 2rem;
 }
 
 .card__text {
     font-size: $base-font-size;
-    color: #656D6F;
+    color: $secondary-text-color;
 }
 .card__button button{
     width: 100%;

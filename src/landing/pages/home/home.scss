@@ -9,15 +9,12 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    color:white;
     justify-content: end;
     align-items: start;
     padding: 50px 50px 30vh 50px;
 }
 
 .home__banner h1 {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
     border-radius: 10px;    
     text-align: left;
     font-size: $heading-font-size;
@@ -25,17 +22,7 @@
     margin: 0px;
 }
 
-
-.home__banner p {
-    text-align: left;
-    font-size: $base-font-size;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 10px;
-}
-
 .home__banner h1 span {
-    color: black;
     background-color: white;
     border-radius: 5px;
     padding: 5px;
@@ -58,6 +45,9 @@
     padding-right: $large-box-spacig;
 }
 
+.home__card-icon {
+    color: $primary-color;
+}
 
 @media (width <= 650px) {
     .home__banner h1 {
