@@ -28,7 +28,7 @@ const Home = () => {
 
     const infoCard = {
         title: '¡Mes Gratis para Probar Todas las Funciones!',
-        description: 'Prueba nuestro servicio gratis por un mes! Disfruta de todas las funciones premium sin compromiso. Aprovecha esta oferta exclusiva y mejora tu experiencia. ¡Inscríbete ahora y comienza hoy mismo',
+        description: 'Prueba nuestro servicio gratis por un mes. Disfruta de todas las funciones premium sin compromiso. Aprovecha esta oferta exclusiva y mejora tu experiencia. ¡Inscríbete ahora y comienza hoy mismo',
         smallText: 'Oferta por tiempo limitado'
     };
 
