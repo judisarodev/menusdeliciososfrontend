@@ -71,7 +71,7 @@ const Home = () => {
         </section>
         <section>
             {blocks.map((block) => (
-                <Block key={block.id} image={block.image} title={block.title} subtitle={block.subtitle} description={block.description} imagePosition={block.imagePosition}/>
+                <Block key={block.id} image={block.image} title={block.title} subtitle={block.subtitle} description={block.description} imageLeftSide={block.imageLeftSide}/>
             ))}
         </section>
             

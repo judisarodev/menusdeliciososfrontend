@@ -9,14 +9,6 @@
     background-color: $secondary-background-color;
     text-align: start;
 }
-.block__left-orientation{
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-.block__right-orientation{
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
 .block__image img{
     width: 100%;
     height: 100%;
