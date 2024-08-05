@@ -6,8 +6,17 @@ import { Button } from 'primereact/button';
 import { InfoCard } from '../../components/info-card/InfoCard';
 import { Card } from '../../components/card/Card';
 import { Block } from '../../components/block/Block';
+import { Gallery } from '../../components/gallery/Gallery';
 import blockImage1 from './../../../assets/home/cooking.jpg';
 import blockImage2 from './../../../assets/home/usage.jpg';
+import menu1 from './../../../assets/home/menu1.jpg';
+import menu2 from './../../../assets/home/menu2.jpg';
+import menu3 from './../../../assets/home/menu3.jpg';
+import menu4 from './../../../assets/home/menu4.jpg';
+import menu5 from './../../../assets/home/menu5.jpg';
+import menu6 from './../../../assets/home/menu6.jpg';
+import menu7 from './../../../assets/home/menu7.jpg';
+import menu8 from './../../../assets/home/menu8.jpg';
 import './home.scss'; 
 
 const Home = () => {
@@ -53,6 +62,46 @@ const Home = () => {
         imageLeftSide: false
     }];
 
+    const gallery = {
+        title: 'Galería de Diseños',
+        subtitle: 'Explora Nuestras Plantillas',
+        description: 'Descubre una variedad de diseños y estilos para tus menús digitales. Cada uno está diseñado para resaltar la personalidad y el estilo único de tu restaurante, brindando a tus clientes una experiencia visual atractiva.',
+        images: [{
+            id: 1,
+            name: 'Menú Clásico',
+            image: menu1,
+        },{
+            id: 2,
+            name: 'Menú Moderno',
+            image: menu2,
+        },{
+            id: 3,
+            name: 'Menú Rústico',
+            image: menu3,
+        },{
+            id: 4,
+            name: 'Menú Elegante',
+            image: menu4,
+        },{
+            id: 5,
+            name: 'Menú Minimalista',
+            image: menu5,
+        },{
+            id: 6,
+            name: 'Menú Temático',
+            image: menu6,
+        },
+        {
+            id: 7,
+            name: 'Menú Panadería',
+            image: menu7,
+        },{
+            id: 8,
+            name: 'Menú Comida Rápida',
+            image: menu8,
+        },],
+    };
+
     return(<div>
     
         <section className="home__banner">
@@ -73,6 +122,9 @@ const Home = () => {
             {blocks.map((block) => (
                 <Block key={block.id} image={block.image} title={block.title} subtitle={block.subtitle} description={block.description} imageLeftSide={block.imageLeftSide}/>
             ))}
+        </section>
+        <section>
+            <Gallery title={gallery.title} subtitle={gallery.subtitle} description={gallery.description} images={gallery.images}/>
         </section>
             
         
