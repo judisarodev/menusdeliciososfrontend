@@ -17,7 +17,10 @@ import menu5 from './../../../assets/home/menu5.jpg';
 import menu6 from './../../../assets/home/menu6.jpg';
 import menu7 from './../../../assets/home/menu7.jpg';
 import menu8 from './../../../assets/home/menu8.jpg';
+import review1 from './../../../assets/home/review1.png';
+import review2 from './../../../assets/home/review2.png';
 import './home.scss'; 
+import { Review } from '../../components/review/Review';
 
 const Home = () => {
     const cardsInfo = [{
@@ -102,6 +105,18 @@ const Home = () => {
         },],
     };
 
+    const reviews = [{
+        image: review1,
+        title: 'Excelente Herramienta para Restaurantes Modernos',
+        description: 'He estado usando esta plataforma para crear menús digitales para mi restaurante y la experiencia ha sido increíble. La interfaz es intuitiva y fácil de usar, lo que me permite actualizar platos y precios en tiempo real. Además, los clientes adoran la presentación moderna y accesible de los menús. Definitivamente, ha mejorado la eficiencia de nuestro servicio y la satisfacción del cliente.',
+        author: 'Esperanza Rodríguez de Moka Tortas'
+    },{
+        image: review2,
+        title: 'Transformación Digital Impresionante',
+        description: 'Desde que implementamos los menús digitales con esta plataforma, hemos visto un aumento notable en la interacción con nuestros clientes. Los diseños son elegantes y se adaptan perfectamente a la estética de nuestro restaurante. La capacidad de compartir los menús en redes sociales ha sido una ventaja adicional que ha atraído a más clientes. ¡Altamente recomendado para cualquier restaurante que quiera modernizarse!',
+        author: 'Francisco Suarez de Pizza Now'
+    }];
+
     return(<div>
     
         <section className="home__banner">
@@ -126,7 +141,9 @@ const Home = () => {
         <section>
             <Gallery title={gallery.title} subtitle={gallery.subtitle} description={gallery.description} images={gallery.images}/>
         </section>
-            
+        <section>
+            <Review reviews={reviews}/>
+        </section>
         
     </div>);
 }
