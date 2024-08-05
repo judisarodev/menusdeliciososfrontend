@@ -28,3 +28,11 @@
 .review__title{
     font-size: $heading-font-size;
 }
+@media (width < 1080px) {
+    .review__container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .review__image{
+        display: none;
+    }
+}

@@ -6,7 +6,7 @@
     width: 100%;
     background-color: $primary-background-color;
     padding: $large-box-spacig;
-    height: 80vh;
+    min-height: 80vh;
     margin-top: 100px;
 }
 .plan__title{
@@ -42,6 +42,6 @@
 }
 .plan__button{
     position: relative;
-    top: 40px;
+    top: 5%;
     width: 100%;
 }

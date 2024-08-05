@@ -126,12 +126,12 @@ const Home = ({selectedMenuItem}) => {
     const reviews = [{
         image: review1,
         title: 'Excelente Herramienta para Restaurantes Modernos',
-        description: 'He estado usando esta plataforma para crear menús digitales para mi restaurante y la experiencia ha sido increíble. La interfaz es intuitiva y fácil de usar, lo que me permite actualizar platos y precios en tiempo real. Además, los clientes adoran la presentación moderna y accesible de los menús. Definitivamente, ha mejorado la eficiencia de nuestro servicio y la satisfacción del cliente.',
+        description: 'He estado usando esta plataforma para crear menús digitales para mi restaurante y la experiencia ha sido increíble',
         author: 'Esperanza Rodríguez de Moka Tortas'
     },{
         image: review2,
         title: 'Transformación Digital Impresionante',
-        description: 'Desde que implementamos los menús digitales con esta plataforma, hemos visto un aumento notable en la interacción con nuestros clientes. Los diseños son elegantes y se adaptan perfectamente a la estética de nuestro restaurante. La capacidad de compartir los menús en redes sociales ha sido una ventaja adicional que ha atraído a más clientes. ¡Altamente recomendado para cualquier restaurante que quiera modernizarse!',
+        description: 'Desde que implementamos los menús digitales con esta plataforma, hemos visto un aumento notable en la interacción con nuestros clientes.',
         author: 'Francisco Suarez de Pizza Now'
     }];
 
