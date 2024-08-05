@@ -29,7 +29,7 @@ const Review = ({reviews}) => {
         numScroll={1} 
         verticalViewPortHeight="360px" 
         itemTemplate={productTemplate}
-        autoplayInterval={2000} />
+        autoplayInterval={10000} />
     </div>);
 }
 

@@ -21,6 +21,7 @@ import review1 from './../../../assets/home/review1.png';
 import review2 from './../../../assets/home/review2.png';
 import './home.scss'; 
 import { Review } from '../../components/review/Review';
+import { FakView } from '../../components/fak/Fak';
 
 const Home = () => {
     const cardsInfo = [{
@@ -117,6 +118,20 @@ const Home = () => {
         author: 'Francisco Suarez de Pizza Now'
     }];
 
+    const faks = [{
+        question: '¿Cómo puedo crear y personalizar un menú digital?',
+        answer: 'Crear y personalizar un menú digital es muy sencillo. Solo necesitas acceder a nuestra plataforma, seleccionar una plantilla que se ajuste a tu estilo y empezar a agregar tus platos y precios. Puedes personalizar los colores, las fuentes y las imágenes para que coincidan con la identidad de tu restaurante.'
+    },{
+        question: '¿Es posible actualizar los menús en tiempo real?',
+        answer: 'Sí, puedes actualizar tus menús en tiempo real. Esto significa que cualquier cambio en los platos o precios se reflejará instantáneamente en el menú digital, asegurando que tus clientes siempre tengan la información más actualizada.'
+    },{
+        question: '¿Puedo acceder a los menús digitales desde cualquier dispositivo?',
+        answer: 'Absolutamente. Nuestros menús digitales están diseñados para ser accesibles desde cualquier dispositivo, ya sea un móvil, una tablet o una computadora. Esto brinda a tus clientes una experiencia cómoda y accesible sin importar cómo accedan a tu menú.'
+    },{
+        question: '¿Cómo puede mi restaurante beneficiarse de los menús digitales?',
+        answer: 'Los menús digitales pueden aumentar la visibilidad de tu restaurante y atraer más clientes. Ofrecen una experiencia interactiva y moderna que puede compartirse fácilmente en redes sociales y plataformas de reseñas. Además, facilitan la actualización y gestión de tu menú, mejorando la eficiencia operativa y la satisfacción del cliente.'
+    },];
+
     return(<div>
     
         <section className="home__banner">
@@ -144,7 +159,9 @@ const Home = () => {
         <section>
             <Review reviews={reviews}/>
         </section>
-        
+        <section>
+            <FakView faks={faks}/>
+        </section>
     </div>);
 }
 
