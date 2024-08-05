@@ -162,6 +162,9 @@ const Home = () => {
         <section>
             <FakView faks={faks}/>
         </section>
+        <section>
+            Planes
+        </section>
     </div>);
 }
 

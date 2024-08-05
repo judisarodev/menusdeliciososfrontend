@@ -31,17 +31,12 @@ const Menu = () => {
         },
         {
             id: 2,
-            label: 'Planes',
+            label: 'Plantillas',
             url: '/'
         },
         {
             id: 3,
-            label: 'Bog',
-            url: '/'
-        },
-        {
-            id: 4,
-            label: 'Plantillas',
+            label: 'Planes',
             url: '/'
         }
     ];

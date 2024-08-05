@@ -9,7 +9,7 @@ const FakView = ({faks}) => {
     <Accordion className="fak__container">
         {faks.map((fak) => {
             return(<AccordionTab header={fak.question}>
-                <p>
+                <p className="fak__answer">
                     {fak.answer}
                 </p>
             </AccordionTab>);
