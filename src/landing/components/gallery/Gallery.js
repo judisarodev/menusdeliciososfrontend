@@ -15,7 +15,7 @@ const Gallery = ({ title, subtitle, description, images }) => {
         <br></br>
         <div className="gallery__images-container">
             {images.map((item) => {
-                return (<div className="gallery__image-item">
+                return (<div key={item.name} className="gallery__image-item">
                     <img src={item.image} alt="Menu"/>
                     <p>{item.name}</p>
                 </div>);

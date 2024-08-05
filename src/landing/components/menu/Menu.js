@@ -3,8 +3,9 @@ import { Menubar } from 'primereact/menubar';
 import './menu.scss';
 import blackLogo from './../../../assets/logo/white-text.png';
 import whiteLogo from './../../../assets/logo/black-text.png';
+import { Button } from "primereact/button";
 
-const Menu = () => {
+const Menu = ({setSelectedMenuItem}) => {
 
     const [isAtTop, setIsAtTop] = useState(true);
 
@@ -27,25 +28,25 @@ const Menu = () => {
         {
             id: 1,
             label: 'Inicio',
-            url: '/'
+            command: () => setSelectedMenuItem(0),
         },
         {
             id: 2,
             label: 'Plantillas',
-            url: '/'
+            command: () => setSelectedMenuItem(1),
         },
         {
             id: 3,
             label: 'Planes',
-            url: '/'
+            command: () => setSelectedMenuItem(2),
         }
     ];
 
     const icon = <img className="menu__icon" src={ isAtTop ? blackLogo : whiteLogo } width={'90px'} alt="Logo"/>;
-
+    const loginButton = <Button className="menu__button" label="Ingresar" severity="warning"  outlined  />
     return(<>
         <nav>
-            <Menubar className={isAtTop ? 'menu__standard-color' : 'menu__light-color'} start={icon} model={items}/>
+            <Menubar className={isAtTop ? 'menu__standard-color' : 'menu__light-color'} start={icon} end={loginButton} model={items}/>
         </nav>
     </>);
 }

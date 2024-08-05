@@ -8,7 +8,7 @@ const FakView = ({faks}) => {
     return(
     <Accordion className="fak__container">
         {faks.map((fak) => {
-            return(<AccordionTab header={fak.question}>
+            return(<AccordionTab key={fak.answer} header={fak.question}>
                 <p className="fak__answer">
                     {fak.answer}
                 </p>

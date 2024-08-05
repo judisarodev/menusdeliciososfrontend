@@ -27,8 +27,8 @@ const Plan = ({ name, amount, savings }) => {
             </div>
 
             <div className="plan__services">
-                {services.map((service) => {
-                    return  <p><span><IoMdCheckmark  /></span> {service}</p>
+                {services.map((service, _index) => {
+                    return  <p key={_index}><span><IoMdCheckmark  /></span> {service}</p>
                 })}
             </div>
 
@@ -51,7 +51,7 @@ const Prices = () => {
     return(<div className="prices__container">
         <div className="prices__plans">
             {plans.map((plan)=>{
-                return <Plan name={plan.name} amount={plan.amount} savings={plan.savings}/>
+                return <Plan key={plan.name} name={plan.name} amount={plan.amount} savings={plan.savings}/>
             })}
         </div>
     </div>);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { IoStatsChart } from 'react-icons/io5';
 import { IoPhonePortraitOutline } from 'react-icons/io5';
 import { IoMdRestaurant } from 'react-icons/io';
@@ -25,7 +25,22 @@ import review1 from './../../../assets/home/review1.png';
 import review2 from './../../../assets/home/review2.png';
 import { Prices } from '../../components/prices/Prices';
 
-const Home = () => {
+const Home = ({selectedMenuItem}) => {
+
+    const homeRef = useRef();
+    const patternsRef = useRef();
+    const pricesRef = useRef(); 
+
+    useEffect(() => {
+        const refs = [homeRef, patternsRef, pricesRef];
+        setTimeout(() => {
+            
+            if (selectedMenuItem >= 0 && selectedMenuItem < refs.length && refs[selectedMenuItem].current) {
+                refs[selectedMenuItem].current.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 0);
+    }, [selectedMenuItem]);
+
     const cardsInfo = [{
         id: 1,
         icon: <IoMdRestaurant className="home__card-icon" size={40} />, 
@@ -135,8 +150,7 @@ const Home = () => {
     },];
 
     return(<div>
-    
-        <section className="home__banner">
+        <section className="home__banner" ref={homeRef}>
             <h1 className="poppins-bold">Crea <span>Menús</span> Digitales Para <span>Restaurantes</span></h1>
             <Button label="Empezar ahora" severity="warning" />
         </section>
@@ -155,7 +169,7 @@ const Home = () => {
                 <Block key={block.id} image={block.image} title={block.title} subtitle={block.subtitle} description={block.description} imageLeftSide={block.imageLeftSide}/>
             ))}
         </section>
-        <section>
+        <section ref={patternsRef}>
             <Gallery title={gallery.title} subtitle={gallery.subtitle} description={gallery.description} images={gallery.images}/>
         </section>
         <section>
@@ -164,8 +178,8 @@ const Home = () => {
         <section>
             <FakView faks={faks}/>
         </section>
-        <section>
-            <Prices />
+        <section ref={pricesRef}>
+            <Prices/>
         </section>
     </div>);
 }
