@@ -7,6 +7,10 @@ import { InfoCard } from '../../components/info-card/InfoCard';
 import { Card } from '../../components/card/Card';
 import { Block } from '../../components/block/Block';
 import { Gallery } from '../../components/gallery/Gallery';
+import { Review } from '../../components/review/Review';
+import { FakView } from '../../components/fak/Fak';
+import './home.scss'; 
+
 import blockImage1 from './../../../assets/home/cooking.jpg';
 import blockImage2 from './../../../assets/home/usage.jpg';
 import menu1 from './../../../assets/home/menu1.jpg';
@@ -19,9 +23,7 @@ import menu7 from './../../../assets/home/menu7.jpg';
 import menu8 from './../../../assets/home/menu8.jpg';
 import review1 from './../../../assets/home/review1.png';
 import review2 from './../../../assets/home/review2.png';
-import './home.scss'; 
-import { Review } from '../../components/review/Review';
-import { FakView } from '../../components/fak/Fak';
+import { Prices } from '../../components/prices/Prices';
 
 const Home = () => {
     const cardsInfo = [{
@@ -163,7 +165,7 @@ const Home = () => {
             <FakView faks={faks}/>
         </section>
         <section>
-            Planes
+            <Prices />
         </section>
     </div>);
 }
