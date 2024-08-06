@@ -1,21 +1,25 @@
 import './App.css';
-import { useState } from 'react';
 import { PrimeReactProvider } from 'primereact/api';
-import { Menu } from './landing/components/menu/Menu';
+
 import { Home } from './landing/pages/home/Home';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Login } from './backoffice/pages/login/Login';
         
 
 function App() {
 
-  const [selectedMenuItem, setSelectedMenuItem] = useState(0);
+  
 
   return (
     <PrimeReactProvider>
       <div className="App">
-        <Menu setSelectedMenuItem={setSelectedMenuItem}/>
-        <Home selectedMenuItem={selectedMenuItem}/>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home />}/>
+            <Route path='/login' element={<Login />}/>
+          </Routes>
+        </BrowserRouter>
       </div>
     </PrimeReactProvider>
   );

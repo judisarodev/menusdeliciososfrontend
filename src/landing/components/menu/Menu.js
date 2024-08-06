@@ -4,10 +4,12 @@ import './menu.scss';
 import blackLogo from './../../../assets/logo/white-text.png';
 import whiteLogo from './../../../assets/logo/black-text.png';
 import { Button } from "primereact/button";
+import { useNavigate } from "react-router-dom";
 
 const Menu = ({setSelectedMenuItem}) => {
 
     const [isAtTop, setIsAtTop] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         function handleScroll(){
@@ -43,7 +45,7 @@ const Menu = ({setSelectedMenuItem}) => {
     ];
 
     const icon = <img className="menu__icon" src={ isAtTop ? blackLogo : whiteLogo } width={'90px'} alt="Logo"/>;
-    const loginButton = <Button className="menu__button" label="Ingresar" severity="warning"  outlined  />
+    const loginButton = <Button onClick={() => navigate('/login')} className="menu__button" label="Ingresar" severity="warning"  outlined  />
     return(<>
         <nav>
             <Menubar className={isAtTop ? 'menu__standard-color' : 'menu__light-color'} start={icon} end={loginButton} model={items}/>

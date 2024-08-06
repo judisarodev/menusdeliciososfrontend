@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { IoStatsChart } from 'react-icons/io5';
 import { IoPhonePortraitOutline } from 'react-icons/io5';
 import { IoMdRestaurant } from 'react-icons/io';
@@ -9,6 +9,7 @@ import { Block } from '../../components/block/Block';
 import { Gallery } from '../../components/gallery/Gallery';
 import { Review } from '../../components/review/Review';
 import { FakView } from '../../components/fak/Fak';
+import { Menu } from './../../components/menu/Menu';
 import './home.scss'; 
 
 import blockImage1 from './../../../assets/home/cooking.jpg';
@@ -25,11 +26,13 @@ import review1 from './../../../assets/home/review1.png';
 import review2 from './../../../assets/home/review2.png';
 import { Prices } from '../../components/prices/Prices';
 
-const Home = ({selectedMenuItem}) => {
+const Home = () => {
 
     const homeRef = useRef();
     const patternsRef = useRef();
     const pricesRef = useRef(); 
+
+    const [selectedMenuItem, setSelectedMenuItem] = useState(0);
 
     useEffect(() => {
         const refs = [homeRef, patternsRef, pricesRef];
@@ -150,6 +153,7 @@ const Home = ({selectedMenuItem}) => {
     },];
 
     return(<div>
+        <Menu setSelectedMenuItem={setSelectedMenuItem}/>
         <section className="home__banner" ref={homeRef}>
             <h1 className="poppins-bold">Crea <span>Menús</span> Digitales Para <span>Restaurantes</span></h1>
             <Button label="Empezar ahora" severity="warning" />
