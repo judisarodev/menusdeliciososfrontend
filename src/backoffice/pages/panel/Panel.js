@@ -6,6 +6,7 @@ import { FcSurvey } from "react-icons/fc";
 import { CiMoneyBill } from "react-icons/ci";
 import { CiSettings } from "react-icons/ci";
 import { Home } from "../home/Home";
+import logo from './../../../assets/logo/black-text.png';
 const Panel = () => {
 
     const homeView = <Home />;
@@ -16,6 +17,10 @@ const Panel = () => {
     const [view, setView] = useState(homeView);
 
     const menuItems = [{
+        template: () => {
+            return(<img width={'100px'} src={logo} alt="logo"/>);
+        }
+    },{
         label: 'Incio',
         icon: <CiHome size={20}/>,
         command: () => setView(homeView), 
@@ -35,8 +40,10 @@ const Panel = () => {
 
     return(<>
         <div className="backoffice-menu">
-            <Menu model={menuItems} />
-            {view}
+            <Menu model={menuItems}/>
+            <div>
+                {view}
+            </div>
         </div>
     </>);
 }
