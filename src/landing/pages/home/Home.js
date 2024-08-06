@@ -11,7 +11,6 @@ import { Review } from '../../components/review/Review';
 import { FakView } from '../../components/fak/Fak';
 import { Menu } from './../../components/menu/Menu';
 import './home.scss'; 
-
 import blockImage1 from './../../../assets/home/cooking.jpg';
 import blockImage2 from './../../../assets/home/usage.jpg';
 import menu1 from './../../../assets/home/menu1.jpg';

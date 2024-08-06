@@ -89,7 +89,7 @@ const Login = ({ loginPage = true }) => {
                     <p>Acepto los <span onClick={() => navigate('/terms')}>términos y condiciones</span> para el tratamiento de datos personales.</p>
                 </div>
             </div>}
-            <Button label="Siguiente" severity="primary" />    
+            <Button label="Siguiente" severity="primary" onClick={() => navigate('/panel')} />    
         </div>
     </div>);
 }
