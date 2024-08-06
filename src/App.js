@@ -18,6 +18,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='/login' element={<Login />}/>
+            <Route path='/terms' element={'Términos'}/>
           </Routes>
         </BrowserRouter>
       </div>

@@ -43,3 +43,21 @@
     grid-template-columns: repeat(2, 1fr);
     gap: $large-spacing;
 }
+.login__terms{
+    font-size: $super-small-font-size;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $small-box-spacig;
+    margin-top: $large-box-spacig;
+}
+.login__terms p{
+    margin: 0px;
+}
+.login__terms span{
+    text-decoration: underline;
+    color: $secondary-color;
+}
+.login__terms span:hover{
+    cursor: pointer;
+}
